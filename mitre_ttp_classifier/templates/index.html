@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vuln & TTP Dashboard</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header id="main-header">
+  <h1>MITRE ATT&amp;CK TTP Classifier Dashboard</h1>
+</header>
+
+
+
+  <!-- 1️⃣ Bar Chart -->
+  <section id="bar-section">
+    <h2>Affected OS Analysis</h2>
+    <svg id="barChart"></svg>
+  </section>
+
+  <!-- 2️⃣ Pie Chart + Legend on right -->
+   <section id="pie-section">
+    <h2>Proportion of Vulnerabilities by OS Family</h2>
+    <svg id="pieChart"></svg>
+  </section>
+
+    <!-- ─── Techniques per Tactic Bar Chart ─── -->
+  <section id="tactic-bar-section">
+    <h2>Techniques per Tactic</h2>
+    <svg id="tacticBarChart"></svg>
+  </section>
+
+
+   <!-- ─── Top Data Sources by Technique Count ─── -->
+  <section id="data-source-section">
+    <h2>Top 10 Data Sources by Technique Count</h2>
+    <svg id="dataSourceChart"></svg>
+  </section>
+
+
+<section id="usage-note">
+  <p>
+    🔍 To explore a MITRE ATT&CK technique in detail:
+    <ol>
+      <li>Use the slider to set how many techniques you’d like to load.</li>
+      <li>Use your mouse wheel or pinch gestures to zoom in/out on the graph.</li>
+      <li>Click the Techinques node  in the graph, The full description and metadata will appear in the details panel.</li>
+    </ol>
+  </p>
+</section>
+
+  <!-- 3️⃣ Force-Graph + Slider + Graph Legend -->
+  <section id="graph-section">
+    <h2>MITRE TTP Force Graph</h2>
+    <label>
+      Number of Techniques to Display:
+      <input type="range" id="nodeCount" min="10" max="200" value="100">
+      <span id="nodeCountVal">100</span>
+    </label>
+    <div id="graph-container">
+      <svg id="graph"></svg>
+    </div>
+    <div id="graphLegend">
+      <span class="legend-item">
+        <span class="color-box technique"></span>Technique
+      </span>
+      <span class="legend-item">
+        <span class="color-box entity"></span>Entity
+      </span>
+    </div>
+  </section>
+
+   
+  <!-- <div id="selector-container">
+    <label for="nodeSelect">Choose a Technique:</label>
+    <select id="nodeSelect">
+      <option value="">-- select ID --</option>
+    </select>
+    <button type="button" id="nodeSubmit">Submit</button>
+  </div> -->
+
+
+  <!-- 4️⃣ Details Panel -->
+  <section id="details-section">
+    <h2>Technique / Entity Details</h2>
+    <div id="details">
+      <p>Click any node above to view its details below.</p>
+    </div>
+  </section>
+
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

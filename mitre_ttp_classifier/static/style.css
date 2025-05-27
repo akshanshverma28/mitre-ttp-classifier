@@ -1,0 +1,163 @@
+html, body {
+  margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  background: #18191c; color: #eee;
+}
+section { padding: 1em; }
+h2 { margin-bottom: 0.5em; }
+
+/* ─── Main Page Heading ─── */
+#main-header {
+  background: #131516;
+  padding: 1.5em 1em;
+  text-align: center;
+  border-bottom: 2px solid #444;
+}
+
+#main-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+
+/* ─── Usage Note Box ─── */
+/* ─── Full‐Width Usage Note ─── */
+#usage-note {
+  width: 100%;
+  margin: 0;
+  padding: 1em 2em;
+  background: #2a2b2f;
+  border-left: 4px solid #4da6ff;
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+
+/* Optional: a subtle underline that “fills” on hover
+#main-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -0.3em;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #58a6ff;
+  transition: width 0.3s ease, left 0.3s ease;
+} */
+/* 
+#main-header h1:hover::after {
+  width: 80%;
+  left: 10%;
+} */
+
+
+/* 1) Bar chart */
+#barChart {
+  width: 100%; height: 300px;
+  background: #24252a;
+  margin-bottom: 1em;
+}
+
+/* 2) Pie chart & legend layout */
+/* Pie-chart container */
+#pie-section {
+  padding: 1em;
+}
+#pieChart {
+  width: 100%;
+  height: 300px;
+  background: #24252a;
+  display: block;
+  margin: 0 auto;
+}
+
+/*  ─ Techniques per Tactic Bar Chart ─  */
+#tacticBarChart {
+  width: 100%;
+  height: 400px;
+  background: #24252a;
+  margin-bottom: 1em;
+}
+
+
+/* ─── Data Sources Bar Chart ─── */
+#dataSourceChart {
+  width: 100%;
+  height: 400px;
+  background: #24252a;
+  margin-bottom: 1em;
+}
+
+
+/* 3) Graph frame, slider & legend */
+#graph-section label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+#nodeCount {
+  width: 200px;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+#nodeCountVal {
+  display: inline-block; width: 30px; text-align: right;
+}
+#graph-container {
+  width: 100%; height: 500px;
+  background: #1f2025;
+  border: 1px solid #444;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+}
+#graph {
+  width: 100%; height: 100%;
+}
+#graphLegend {
+  font-size: 14px;
+}
+.legend-item {
+  margin-right: 1.5em;
+}
+.color-box {
+  display: inline-block;
+  width: 12px; height: 12px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.color-box.technique { background: #4da6ff; }
+.color-box.entity    { background: #ffa64d; }
+
+/* 
+#selector-container {
+  margin: 1em 0;
+}
+#nodeSelect {
+  margin-right: 0.5em;
+  padding: 0.3em;
+}
+#nodeSubmit {
+  padding: 0.3em 0.6em;
+} */
+
+
+/* 4) Details panel */
+#details {
+  background: #24252a;
+  border: 1px solid #444;
+  padding: 1em;
+  line-height: 1.4;
+}
+#details h3 {
+  margin-top: 1em;
+  color: #ddd;
+}
+#details ul {
+  padding-left: 1.2em;
+}
+#details ul li {
+  margin: 0.2em 0;
+}
